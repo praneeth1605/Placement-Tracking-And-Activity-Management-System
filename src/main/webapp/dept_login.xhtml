@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+<h:head>
+    <style>
+        .body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .container h2 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .form-group input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            border-radius: 4px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-group .register-link {
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .form-group .register-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</h:head>
+<body>
+<ui:include src="/home.xhtml" />
+    <center>
+        <h2>Department Login</h2>
+    <div class="container">
+        <h:form>
+            <div class="form-group">
+                <h:outputLabel for="name" value="Department Name" />
+                <h:inputText id="name" validatorMessage="Name Required" value="#{deptbean.name}" >
+                <f:validateRequired/>
+                </h:inputText>
+                <h:message for="name" style="color:red;"/>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="password" value="Password" />
+                <h:inputSecret id="password" validatorMessage="Password Requried" value="#{deptbean.password}" >
+                <f:validateRequired/>
+                </h:inputSecret>
+                <h:message for="password" style="color:red;"/>
+            </div>
+            <div class="form-group">
+                <h:commandButton value="Login" action="#{deptbean.verifylogin()}" />
+            </div>
+        </h:form>
+    </div>
+    </center>
+</body>
+</html>
+

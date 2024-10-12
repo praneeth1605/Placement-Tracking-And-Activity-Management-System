@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TalentSpots</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+}
+
+.main {
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjusted for header height */
+}
+
+.hero {
+    background: url('Designer Landscape.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 200%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg" alt="TalentSpots Logo">
+            </div>
+            <nav class="navbar">
+                <a href="home.jsf">Home</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to TalentSpots</h1>
+                <p>Your Gateway to a Brighter Future</p>
+                <a href="home.jsf" class="btn">Get Started</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TalentSpots. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+      <h:head>
+    <title>Placement Portal Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1em;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+        }
+        .navbar form {
+            display: inline;
+        }
+    </style>
+</h:head> 
+<body>
+   <center>
+        <h:graphicImage value="logo.jpg" alt="TalentSpot Logo" />
+        <h2>TalentSpot Placements</h2>
+    </center>
+    <div class="navbar">
+        <div class="logo">Placement Portal</div>
+        <div>
+         <h:form>
+                <h:commandLink value="Add Job Profiles" action="addjob_form.jsp" />
+            </h:form>
+            <h:form>
+                <h:commandLink value="Student" action="viewallstudent" />
+            </h:form>
+            <h:form>
+                <h:commandLink value="Department" action="viewalldept" />
+            </h:form>
+            <h:form>
+                <h:commandLink value="Faculty" action="viewallfaculty" />
+            </h:form>
+            <h:form>
+                <h:commandLink value="Logout" action="logout.jsp" />
+            </h:form>
+        </div>
+        </div>
+        <h2 align="center">IRP Home</h2>
+</body>
+</html>
